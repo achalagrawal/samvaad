@@ -1,4 +1,6 @@
 site_name: Samvaad
+extra_css:
+  - stylesheets/extra.css
 theme:
   name: material
   features:
