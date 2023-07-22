@@ -1,0 +1,24 @@
+{
+  "name": "Samvaad",
+  "version": "0.0.5",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d site",
+    "build": "mkdocs build && workbox injectManifest && npm run cname",
+    "cname": "echo 'samvaad.utsv.in' > site/CNAME",
+    "serve-pwa": "python -m http.server 8000 --bind 127.0.0.1 -d site",
+    "build-serve": "npm run build && python -m http.server 8000 --bind 127.0.0.1 -d site"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^5.0.0",
+    "workbox-cli": "^4.3.1"
+  }
+}

@@ -1,8 +1,17 @@
-site_name: Samvaad
+# Project information
+site_name: "Samvaad"
+site_description: "Conversations with Shri A Nagraj"
+site_author: "Achal Agrawal"
+site_url: "https://samvaad.utsv.in"
+
+# Configuration
+extra_css:
+  - stylesheets/extra.css
 theme:
-  name: material
+  name: "material"
   features:
     - navigation.footer
+  language: "en"
   palette:
     # Palette toggle for light mode
     - scheme: default
@@ -15,5 +24,18 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+  font:
+    text: "Roboto"
+
+# Customization
 extra:
   generator: false
+  manifest: "manifest.json"
+
+plugins:
+  - search
+
+#PWA Config
+use_directory_urls: false
+scope: "./"
+version: 0.0.5
